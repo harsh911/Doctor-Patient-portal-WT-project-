@@ -1,0 +1,40 @@
+.main{
+  position: absolute;
+  padding: 80px 30px 0px 30px;
+  margin-top:80px 0px 80px 0px;
+  background-image: linear-gradient(rgb(147, 248, 251),rgb(255, 255, 255));
+  padding-top:10px;
+}
+
+.elements{
+  display:inline-block;
+  text-align: center;
+  background-color: rgb(60, 7, 104);
+  color:navajowhite;
+  border-radius:20px;
+  background-size:100%;
+  margin: 50px 20px 50px 20px;
+  height : 250px;
+  width: 280px;
+  padding:1px;
+  transition: transform 1s;
+  box-shadow: 0 4px 8px 0 rgb(0, 0, 0), 0 6px 20px 0 rgb(18, 2, 19);
+}
+
+.elements img{
+margin: auto;
+display: block;
+border-radius: 20px 20px 0px 0px;
+width: 100%;
+height: 80%;
+object-fit:cover;
+}
+
+.elements:hover{
+      background-image: radial-gradient(circle,rgb(245, 255, 111),rgb(255, 94, 0));
+      cursor: pointer;
+      transform: scale3d(1.2,1.2,1.2);
+      color:black;
+}
+
+

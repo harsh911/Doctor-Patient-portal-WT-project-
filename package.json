@@ -11,6 +11,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-devkit/schematics": "^8.3.0",
     "@angular/animations": "~8.2.3",
     "@angular/common": "~8.2.3",
     "@angular/compiler": "~8.2.3",
@@ -19,6 +20,8 @@
     "@angular/platform-browser": "~8.2.3",
     "@angular/platform-browser-dynamic": "~8.2.3",
     "@angular/router": "~8.2.3",
+    "bootstrap": "^4.3.1",
+    "bootstrap3": "^3.3.5",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
