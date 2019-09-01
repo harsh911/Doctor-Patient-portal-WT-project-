@@ -11,6 +11,8 @@ import { HeaderComponent } from './header/header/header.component';
 import { FooterComponent } from './footer/footer/footer.component';
 import { TabsComponent } from './tabs/tabs/tabs.component';
 import { ContentComponent } from './content/content/content.component';
+import { RegDoctorComponent } from './register/register/reg-doctor/reg-doctor.component';
+import { RegPatientComponent } from './register/register/reg-patient/reg-patient.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { ContentComponent } from './content/content/content.component';
     HeaderComponent,
     FooterComponent,
     TabsComponent,
-    ContentComponent
+    ContentComponent,
+    RegDoctorComponent,
+    RegPatientComponent
   ],
   imports: [
     BrowserModule

@@ -1,3 +1,8 @@
 <app-header></app-header>
-<app-content></app-content>
-<app-tabs></app-tabs>
+<app-content>
+  <h4 style="margin-top:200px">content passed through ng content</h4>
+</app-content>
+<app-tabs
+*ngFor="let element of elements"
+[tab]="element"
+></app-tabs>

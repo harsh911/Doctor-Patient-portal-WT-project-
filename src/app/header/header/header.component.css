@@ -32,13 +32,13 @@
   color: navajowhite;
   transform: scale(1.1,1.1);
   box-shadow: 0 4px 8px 0 rgba(200, 28, 216, 0.8), 0 6px 20px 0 rgb(18, 2, 19);
-
 }
 
 .nav{
     text-align: center;
     position:fixed;
     width: 100%;
+    top : 0;
 }
 .navbar{
     border-radius: 0px 0px 10px 10px;
@@ -50,7 +50,6 @@
     font-size: 15px;
     padding:0px;
     box-shadow: 0 4px 8px 0 rgba(200, 28, 216, 0.51), 0 6px 20px 0 rgb(18, 2, 19);
-
 }
 .tabs{
   display: inline-block;
