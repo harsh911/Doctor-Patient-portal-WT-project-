@@ -1,0 +1,24 @@
+.container{
+  background-color: rgb(92, 119, 255);
+  padding: 0px 20px;
+  border-radius: 0px 0px 0px 5px;
+  width: 350px;
+  max-width: 450px;
+  height: 470px;
+  max-height: 470px;
+  overflow: auto;
+  border-width: 0px 5px 5px 5px;
+  border-style: outset;
+  border-color: black;
+}
+h1{
+  text-align: center;
+  background-color: rgb(3, 3, 3);
+  color: azure;
+  margin: 0px;
+  width: 400px;
+  max-width: 450px;
+  border-radius: 5px 5px 0px 0px;
+
+}
+

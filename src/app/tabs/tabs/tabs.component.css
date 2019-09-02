@@ -10,7 +10,7 @@
   height : 250px;
   width: 260px;
   padding:1px;
-  transition: transform 1s;
+  transition: transform .5s;
   box-shadow: 0 4px 8px 0 rgb(0, 0, 0), 0 6px 20px 0 rgb(18, 2, 19);
 }
 

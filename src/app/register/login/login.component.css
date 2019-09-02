@@ -6,7 +6,7 @@
 
 .box {
   align-content: center;
-  position: sticky;
+  position: relative;
   top: 200px;
   display: block;
   background-image: radial-gradient(
@@ -24,7 +24,6 @@
   padding: 0px 80px 50px 80px;
   margin-right:auto;
   margin-left:auto;
-  margin-top: 200px;
 }
 
 input {

@@ -13,6 +13,9 @@ import { TabsComponent } from './tabs/tabs/tabs.component';
 import { ContentComponent } from './content/content/content.component';
 import { RegDoctorComponent } from './register/register/reg-doctor/reg-doctor.component';
 import { RegPatientComponent } from './register/register/reg-patient/reg-patient.component';
+import { DoctorsComponent } from './doctors/doctors.component';
+import { DoctorDetailsComponent } from './doctors/doctor-details/doctor-details.component';
+import { DoctorComponent } from './doctors/doctor-list/doctor/doctor.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { RegPatientComponent } from './register/register/reg-patient/reg-patient
     TabsComponent,
     ContentComponent,
     RegDoctorComponent,
-    RegPatientComponent
+    RegPatientComponent,
+    DoctorsComponent,
+    DoctorDetailsComponent,
+    DoctorComponent
   ],
   imports: [
     BrowserModule

@@ -1,0 +1,15 @@
+<div>
+  <a href="#" class="list grid-container"
+  (click)="onSelected()">
+  <span class="image grid-item">
+      <img
+      [src]="doctor.imagePath"
+      alt="{{ doctor.name }}" />
+    </span>
+  <div class="info grid-item">
+    <h2 >{{ doctor.name }}</h2>
+    <div>{{ doctor.specialisation }}</div>
+  </div>
+</a>
+</div>
+

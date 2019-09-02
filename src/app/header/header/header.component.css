@@ -23,14 +23,14 @@
   color:  #21022f;
   text-align: center;
   padding: 10px 25px;
-  transition: background-color 1s, color 1s,box-shadow 1s,transform 0.5s;
+  transition: background-color 0.25s, color 0.25s,box-shadow 1s,transform 0.25s;
 }
 
 .navbar li a:hover {
   position: static;
   background-color: #21022f;
   color: navajowhite;
-  transform: scale(1.1,1.1);
+  transform: scale(1.05,1.05);
   box-shadow: 0 4px 8px 0 rgba(200, 28, 216, 0.8), 0 6px 20px 0 rgb(18, 2, 19);
 }
 
@@ -67,4 +67,9 @@
     font-size: 40px;
     color: navajowhite;
    box-shadow: 100px rgba(0, 0, 0, 0.2);
+   text-decoration: none;
+}
+#ttl a{
+  text-decoration: none;
+  color: navajowhite;
 }
