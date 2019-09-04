@@ -1,14 +1,41 @@
 
 <div class="nav">
-  <div id="ttl" ><a href="#" (click)="onSelected('home')">Patient - Doctor Portal</a></div>
+  <div id="ttl" ><a routerLink="/" (click)="onSelected('home')">Patient - Doctor Portal</a></div>
   <div class="navbar">
     <ul class="" style="margin-left:100px;">
-      <li><a href="#" (click)="onSelected('history')"> Medical History</a></li>
-      <li><a href="#" (click)="onSelected('doctor')"> View Doctors</a></li>
-      <li><a href="#" (click)="onSelected('appointment')"> Book Appointment</a></li>
+      <li><a  routerLink="/" (click)="onSelected('history')"> Medical History</a></li>
+      <li><a routerLink="/doctors" (click)="onSelected('doctor')"> View Doctors</a></li>
+      <li><a routerLink="/" (click)="onSelected('appointment')"> Book Appointment</a></li>
 
-      <li id="login" ><a href="#" (click)="onSelected('log')">  Log-in</a></li>
+      <li id="login" ><a routerLink="/login" (click)="onSelected('log')">  Log-in</a></li>
   </ul>
 </div>
 </div>
 
+<!--
+<div class="nav">
+  <div id="ttl" ><a routerLink="/" routerLinkActive="active" [routerLinkActive]={exact:true}
+    (click)="onSelected('home')">Patient - Doctor Portal</a>
+    <app-tabs
+    *ngFor="let element of elements"
+    [tab]="element"
+    ></app-tabs>
+  </div>
+  <div class="navbar">
+    <ul class="" style="margin-left:100px;">
+      <li><a  routerLinkActive="active" [routerLinkActive]={exact:true}
+        (click)="onSelected('history')"> Medical History</a></li>
+
+      <li><a routerLink="/doctors" routerLinkActive="active" [routerLinkActive]={exact:true}
+        (click)="onSelected('doctor')"> View Doctors</a></li>
+
+      <li><a routerLinkActive="active" [routerLinkActive]={exact:true}
+        (click)="onSelected('appointment')"> Book Appointment</a></li>
+
+      <li id="login" ><a routerLink="/login" routerLinkActive="active" [routerLinkActive]={exact:true}
+        (click)="onSelected('log')">  Log-in</a></li>
+  </ul>
+</div>
+</div>
+
+ -->

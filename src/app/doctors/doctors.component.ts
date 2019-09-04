@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Doctor } from './doctors.model';
 
 @Component({
@@ -7,7 +7,7 @@ import { Doctor } from './doctors.model';
   styleUrls: ['./doctors.component.css']
 })
 export class DoctorsComponent implements OnInit {
-  doctor: Doctor;
+  @Input() doctor: Doctor;
   constructor() { }
 
   ngOnInit() {

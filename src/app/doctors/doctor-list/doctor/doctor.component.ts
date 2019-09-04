@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { Doctor } from '../../doctors.model';
 
 @Component({
@@ -7,7 +7,7 @@ import { Doctor } from '../../doctors.model';
   styleUrls: ['./doctor.component.css']
 })
 export class DoctorComponent implements OnInit {
-
+  @Output() doctorSelected  = new EventEmitter();
   @Input() doctor: Doctor;
   constructor() { }
 
@@ -15,7 +15,7 @@ export class DoctorComponent implements OnInit {
   }
 
   onSelected() {
-    //
+    this.doctorSelected.emit();
   }
 }
 

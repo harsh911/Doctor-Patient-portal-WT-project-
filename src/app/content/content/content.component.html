@@ -1,6 +1,9 @@
 
-<div class="content" style="height:200px">
-  <div>
-      <ng-content></ng-content>
+<div class="content">
+  <div style="margin-top: 100px">
+      <app-tabs
+        *ngFor="let element of elements"
+        [tab]="element"
+      ></app-tabs>
   </div>
 </div>

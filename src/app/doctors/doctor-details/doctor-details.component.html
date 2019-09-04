@@ -1,14 +1,18 @@
-<!-- <div>
-    <a href="#" class="list grid-container"
-    (click)="onSelected()">
-    <span class="image grid-item">
-        <img
-        [src]="doctor.imagePath"
-        alt="{{ doctor.name }}" />
-      </span>
-    <div class="info grid-item">
-      <h2 >{{ doctor.name }}</h2>
-      <div>{{ doctor.specialisation }}</div>
-    </div>
-  </a>p
-  </div> -->
+<div>
+    <div href="#" class="grid-container">
+      <div class="info grid-item">
+        <h2 >{{ doctor.name }}</h2>
+        <div class="item"><span>Specialization: </span>{{ doctor.specialisation }}</div>
+        <div class="item"><span>Office: </span>{{ doctor.office }}</div>
+        <div class="item"><span>Phone: </span>{{ doctor.phone }}</div>
+        <div class="item"><span>Age: </span>{{ doctor.age }}</div>
+        <div class="item"><span>Address: </span>{{ doctor.address }}</div>
+      </div>
+
+        <div class="image grid-item">
+          <img
+          [src]="doctor.imagePath"
+          alt="{{ doctor.name }}" />
+      </div>
+  </div>
+  </div>

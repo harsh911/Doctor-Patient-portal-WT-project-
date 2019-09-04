@@ -1,16 +1,9 @@
 <app-header (selectedTab)="onNavigate($event)"></app-header>
-<app-content *ngIf = "tab === 'home'">
-  <h4 style="margin-top:100px">content passed through ng content</h4>
-</app-content>
+<!--
 <app-details *ngIf = "tab === 'history'"></app-details>
 <app-doctors *ngIf = "tab === 'doctor'"></app-doctors>
 <app-appointment *ngIf = "tab === 'appointment'"></app-appointment>
 <app-login *ngIf = "tab === 'log'"></app-login>
-<div *ngIf = "tab === 'home'">
-  <app-tabs
-*ngFor="let element of elements"
-[tab]="element"
-></app-tabs>
-</div>
+-->
 
-
+<router-outlet></router-outlet>

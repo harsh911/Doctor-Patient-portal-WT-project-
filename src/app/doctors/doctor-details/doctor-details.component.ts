@@ -13,8 +13,8 @@ export class DoctorDetailsComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSelected(){
-    //
+  doctorChosen(doc: Doctor) {
+    this.doctor = doc;
   }
 
 }

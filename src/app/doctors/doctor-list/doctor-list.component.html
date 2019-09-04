@@ -2,7 +2,8 @@
   </div>
   <h1>Select Doctor</h1>
   <div class="container">
-    <app-doctor *ngFor="let doc of doctors" [doctor]="doc">
+    <app-doctor *ngFor="let doc of doctors" [doctor]="doc"
+   (doctorSelected)="selectedDoctor(doc)">
   </app-doctor>
   </div>
 

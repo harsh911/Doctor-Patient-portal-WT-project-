@@ -17,6 +17,15 @@ import { DoctorsComponent } from './doctors/doctors.component';
 import { DoctorDetailsComponent } from './doctors/doctor-details/doctor-details.component';
 import { DoctorComponent } from './doctors/doctor-list/doctor/doctor.component';
 
+import { Routes, RouterModule } from '@angular/router';
+
+const appRoutes: Routes = [
+  {path: '', component: ContentComponent },
+  {path: 'login', component: LoginComponent },
+  {path: 'doctors', component: DoctorsComponent },
+  {path: 'doctors/:id', component: DoctorsComponent }
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +45,8 @@ import { DoctorComponent } from './doctors/doctor-list/doctor/doctor.component';
     DoctorComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

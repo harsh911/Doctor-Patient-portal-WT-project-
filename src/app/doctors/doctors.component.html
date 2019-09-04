@@ -1,4 +1,9 @@
 <div class="grid-container">
-    <app-doctor-list></app-doctor-list>
-  <app-doctor-details></app-doctor-details>
+    <app-doctor-list (Selected)="doctor = $event"></app-doctor-list>
+  <app-doctor-details
+  *ngIf = "doctor; else infotext"
+  [doctor]="doctor"></app-doctor-details>
+  <ng-template #infotext>
+    <h1 style="margin-top: 300px;">Please select a doctor</h1>
+  </ng-template>
 </div>
