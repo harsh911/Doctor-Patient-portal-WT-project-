@@ -1,0 +1,84 @@
+
+.title {
+  text-align: center;
+  border-radius: 30px;
+}
+
+.box {
+  align-content: center;
+  position: relative;
+  top: 120px;
+  display: block;
+  background-image: radial-gradient(
+    circle,
+    rgb(245, 253, 248),
+    rgba(150, 252, 122, 0.9)
+  );
+  z-index: 10;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 8px 14px 0 rgb(0, 0, 0), 0 6px 12px 0 black;
+  padding: 0px 80px 50px 80px;
+  margin-right:auto;
+  margin-left:auto;
+  height: 450px;
+  width: 700px;
+}
+input {
+  background-color: transparent;
+  width: 250px;
+  height: 20px;
+  border: none;
+  border-bottom: 2px solid rgb(2, 0, 0);
+  font-size: 16px;
+}
+textarea {
+  background-color: transparent;
+  width: 250px;
+  height: 60px;
+  border : 2px solid rgb(2, 0, 0);
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+input:focus{
+  border-bottom: 2px solid blue;
+  outline:none;
+  font-size: 20px;
+}
+textarea:focus{
+  border: 2px solid blue;
+  outline:none;
+  font-size: 20px;
+}
+.form {
+  display: block;
+  padding: 20px 10px 0px 0px;
+  margin-top:20px;
+  margin-right:auto;
+  margin-left:auto;
+}
+.form label {
+  font-weight: bold;
+  padding-top: 5px;
+}
+button {
+  margin-right:auto;
+  margin-left:auto;
+  display: block;
+  font-size: 16px;
+  height: 40px;
+  width: 80px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  background-color: green;
+  align-content: center;
+}
+button:hover {
+  color: rgb(253, 255, 149);
+  font-weight: bold;
+  background-color: rgb(0, 0, 0);
+}

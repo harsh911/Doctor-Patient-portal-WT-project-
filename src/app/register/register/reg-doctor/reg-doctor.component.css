@@ -1,0 +1,135 @@
+
+.boxin {
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+  grid-template-rows: 80px repeat(7, 50px);
+  grid-gap: 10px;
+}
+
+.title {
+  grid-row: 1/2;
+  grid-column: 1/3;
+  text-align: center;
+  font-size: 25px;
+}
+.firstname {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+.lastname {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+.dob {
+  grid-row: 3/4;
+  grid-column: 1/2;
+}
+.gender {
+  grid-row: 3/4;
+  grid-column: 2/3;
+}
+.email {
+  grid-row: 4/5;
+  grid-column: 1/2;
+}
+.phone {
+  grid-row:4/5;
+  grid-column: 2/3;
+}
+.address {
+  grid-row: 5/7;
+  grid-column: 1/2;
+}
+.photo {
+  grid-row: 5/7;
+  grid-column: 2/3;
+}
+.pass1 {
+  grid-row: 7/8;
+  grid-column: 1/2;
+}
+.pass2 {
+  grid-row: 7/8;
+  grid-column: 2/3;
+}
+.signin {
+  grid-row: 8/9;
+  grid-column: 1/3;
+}
+
+
+.box {
+  align-content: center;
+  position: relative;
+  top: 120px;
+  display: block;
+  background-image: radial-gradient(circle, rgb(245, 253, 248), rgba(247, 251, 165, 0.693)
+  );
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 8px 14px 0 rgb(0, 0, 0), 0 6px 12px 0 black;
+  padding: 0px 80px 50px 80px;
+  margin-right:auto;
+  margin-left:auto;
+  height: 470px;
+  width: 700px;
+}
+
+
+input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgb(2, 0, 0);
+  font-size: 16px;
+  width: 90%;
+  color:rgb(255, 71, 148);
+}
+textarea {
+  background-color: transparent;
+  width: 250px;
+  height: 60px;
+  border : 2px solid rgb(2, 0, 0);
+  font-size: 16px;
+  width: 90%;
+  color:rgb(255, 0, 106);
+}
+
+input:focus{
+  background-color: rgba(249, 255, 142, 0.939);
+  border-bottom: 2px solid blue;
+  outline:none;
+  font-size: 18px;
+}
+textarea:focus{
+  border: 2px solid blue;
+  outline:none;
+  font-size: 20px;
+}
+
+button {
+  margin-right:auto;
+  margin-left:auto;
+  display: block;
+  font-size: 16px;
+  height: 40px;
+  width: 80px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  background-color: green;
+  align-content: center;
+}
+button:hover {
+  color: rgb(253, 255, 149);
+  font-weight: bold;
+  background-color: rgb(0, 0, 0);
+}
+
+label {
+  font-weight: bold;
+  padding-top: 5px;
+  font-size: 18px;
+  color: rgb(92, 0, 90);
+}

@@ -6,9 +6,8 @@
   overflow: hidden;
   background-color: inherit;
 }
-#login{
+#login, #register{
   float:right;
-  margin-right:20px;
 }
 .navbar li {
   float: left;

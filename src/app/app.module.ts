@@ -22,6 +22,8 @@ import { Routes, RouterModule } from '@angular/router';
 const appRoutes: Routes = [
   {path: '', component: ContentComponent },
   {path: 'login', component: LoginComponent },
+  {path: 'register/doctor', component: RegDoctorComponent },
+  {path: 'register/patient', component: RegPatientComponent },
   {path: 'doctors', component: DoctorsComponent },
   {path: 'doctors/:id', component: DoctorsComponent }
 ];
