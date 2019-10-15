@@ -1,0 +1,18 @@
+
+<div class="box">
+    <div class="item title">
+        <h1>All Appointments</h1>
+    </div>
+    <div class="doctor-list grid-container" *ngFor="let app of appointments">
+        <div class="doctor"> Doctor: {{app.doctor}} </div>
+        <div class="date"> Date: {{app.date}} </div>
+        <div class="time"> Time:-{{app.time}} </div>
+        <div class="office">Office: {{app.office}} </div>
+
+        <div class="cancel">
+        <button type="button">Cancel</button>
+      </div>
+    </div>
+
+
+  </div>

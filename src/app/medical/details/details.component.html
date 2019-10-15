@@ -1,1 +1,78 @@
-<p>details works!</p>
+<div class="box">
+  <div class="boxin">
+    <div class="title">
+     <h1>Medical History</h1>
+    </div>
+
+    <div class="height">
+        <label for="height">Height(cm's) :</label>
+        <input type="number" id="height">
+    </div>
+      <div class="weight">
+        <label for="weight">Weight(Kg's) :</label>
+        <input type="number" id="weight">
+    </div>
+    <div class="drugAllergies">
+      <label for="drugAllergies">Enter drug allergies (if any) :</label>
+      <input type="text" id="drugAllergies">
+  </div>
+
+    <div class="illness">
+        <label for="illness">Illnesses :</label>
+      <div *ngFor="let ill of illness">
+        {{ill}} <input type="checkbox" [id]="ill"  [name]="ill">
+
+      </div>
+    </div>
+    <div class="operations">
+      <label for="operations">Any Operations :</label>
+      <input type="text" id="operations">
+  </div>
+  <div class="medications">
+    <label for="medications">Any Currunt medications :</label>
+    <input type="text" id="medications">
+  </div>
+  <div class="exercise">
+    <label for="exercise">Exercise :</label>
+     <select>
+        <option value="never">Never</option>
+        <option value="1-2">1-2 days</option>
+        <option value="3-4">3-4 days</option>
+        <option value="5+">5+ days</option>
+     </select>
+  </div>
+  <div class="diet">
+      <label for="diet">Diet Plan :</label>
+       <select>
+          <option value="loose">Loose Diet</option>
+          <option value="strict">Strict Diet</option>
+          <option value="none">No Diet Plan</option>
+       </select>
+    </div>
+
+    <div class="alcohol">
+        <label for="alcohol">Alcohol consumption :</label>
+         <select>
+            <option value="never">Never</option>
+            <option value="1-2">1-2 times/week</option>
+            <option value="5+">3+ times/week</option>
+         </select>
+      </div>
+
+      <div class="smoke">
+          <label for="gender">Do you Smoke? :</label>
+          <input type="radio" id="smoke" style="width:20px" name="smoke" checked>No
+          <input type="radio" id="smoke" style="width:20px" name="smoke">Yes
+      </div>
+
+      <div class="comments">
+          <label for="comments">Any other comments regarding health :</label>
+          <textarea class="comments"></textarea>
+      </div>
+
+    <div class="done">
+      <button type="button">Done</button>
+    </div>
+
+  </div>
+</div>

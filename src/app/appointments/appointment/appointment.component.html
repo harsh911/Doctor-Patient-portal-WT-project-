@@ -1,1 +1,28 @@
-<p>appointment works!</p>
+<div class="container">
+    <app-doctor-list ></app-doctor-list>
+
+    <div class="grid-container">
+        <div class="item title">
+            <h1>Book Appointment</h1>
+        </div>
+        <div class="item doctor">
+            <label for="date">Doctor : </label>
+            <select ngFor>
+            </select>
+          </div>
+        <div class="item date">
+          <label for="date">Select Date: </label>
+        <input type="date" id="date"/>
+        </div>
+        <div class="item time">
+          <label for="date">Select Time: </label>
+        <input type="time" id="time"/>
+        </div>
+
+        <div class="book">
+        <button routerLink="../all-appointments" type="button">Book Appointment</button>
+      </div>
+
+      </div>
+</div>
+

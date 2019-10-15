@@ -18,6 +18,7 @@ import { DoctorDetailsComponent } from './doctors/doctor-details/doctor-details.
 import { DoctorComponent } from './doctors/doctor-list/doctor/doctor.component';
 
 import { Routes, RouterModule } from '@angular/router';
+import { ViewAppointmentsComponent } from './appointments/view-appointments/view-appointments.component';
 
 const appRoutes: Routes = [
   {path: '', component: ContentComponent },
@@ -25,7 +26,10 @@ const appRoutes: Routes = [
   {path: 'register/doctor', component: RegDoctorComponent },
   {path: 'register/patient', component: RegPatientComponent },
   {path: 'doctors', component: DoctorsComponent },
-  {path: 'doctors/:id', component: DoctorsComponent }
+  {path: 'doctors/:id', component: DoctorsComponent },
+  {path: 'appointments', component: AppointmentComponent },
+  {path: 'medical', component: DetailsComponent },
+  {path: 'all-appointments', component: ViewAppointmentsComponent }
 ];
 
 @NgModule({
@@ -44,7 +48,8 @@ const appRoutes: Routes = [
     RegPatientComponent,
     DoctorsComponent,
     DoctorDetailsComponent,
-    DoctorComponent
+    DoctorComponent,
+    ViewAppointmentsComponent
   ],
   imports: [
     BrowserModule,

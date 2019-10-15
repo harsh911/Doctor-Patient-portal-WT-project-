@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+  margin:0px;
+  padding:0px;
+   /* background-image: url('https://images.wallpaperscraft.com/image/texture_spots_purple_130336_1600x900.jpg'); */
+   /* background-image: url('https://assets.website-files.com/5bfd1275cc56e15ce750b18e/5c289afb9a15754195893a3d_16.%20Medium%20Purple.jpg'); */
+   background-size: cover;
+}
+

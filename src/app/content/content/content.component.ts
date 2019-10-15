@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content.component.css']
 })
 export class ContentComponent implements OnInit {
-  elements = [{ title: 'Medical', imagePath: 'https://myblue.bluecrossma.com/sites/g/files/csphws1461/files/inline-images/Doctor%20Image%20Desktop.png'},
-  { title: 'History', imagePath: 'https://myblue.bluecrossma.com/sites/g/files/csphws1461/files/inline-images/Doctor%20Image%20Desktop.png'},
-  { title: 'Appointments', imagePath: 'https://myblue.bluecrossma.com/sites/g/files/csphws1461/files/inline-images/Doctor%20Image%20Desktop.png'},
-  { title: 'EditDetails', imagePath: 'https://myblue.bluecrossma.com/sites/g/files/csphws1461/files/inline-images/Doctor%20Image%20Desktop.png'}];
+  elements = [{ title: 'Medical', imagePath: 'https://accelerator-origin.kkomando.com/wp-content/uploads/2016/01/medical-records.jpg', link: '/medical'},
+  { title: 'Doctors', imagePath: 'https://p7.hiclipart.com/preview/162/230/346/cartoon-physician-drawing-the-bearded-doctor.jpg', link: '/doctors'},
+  { title: 'Appointments', imagePath: 'https://denverseniorcare.com/wp-content/uploads/2018/10/4-Details-to-Remember-for-Medical-Appointment-Success.png', link: '/appointments'},
+  { title: 'EditDetails', imagePath: 'https://www.connectedgeek.net/connectedgeek-net/wp-content/uploads/2018/09/698873-icon-136-document-edit-512.png', link: '/register/patient'}];
 
   constructor() { }
 

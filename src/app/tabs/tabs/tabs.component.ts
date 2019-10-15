@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TabsComponent implements OnInit {
   // tslint:disable-next-line: no-input-rename
-  @Input('tab') elements: { title: string, imagePath: string};
+  @Input('tab') elements: { title: string, imagePath: string, link: string};
   constructor() { }
 
   ngOnInit() {

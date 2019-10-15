@@ -1,5 +1,5 @@
 <div>
-    <div href="#" class="grid-container">
+    <div class="grid-container">
       <div class="info grid-item">
         <h2 >{{ doctor.name }}</h2>
         <div class="item"><span>Specialization: </span>{{ doctor.specialisation }}</div>
@@ -7,6 +7,10 @@
         <div class="item"><span>Phone: </span>{{ doctor.phone }}</div>
         <div class="item"><span>Age: </span>{{ doctor.age }}</div>
         <div class="item"><span>Address: </span>{{ doctor.address }}</div>
+        <hr>
+        <div  class="item">
+        <button routerLink="../appointments" type="button">Book Appointment</button>
+      </div>
       </div>
 
         <div class="image grid-item">
@@ -14,5 +18,6 @@
           [src]="doctor.imagePath"
           alt="{{ doctor.name }}" />
       </div>
-  </div>
+
+      </div>
   </div>
