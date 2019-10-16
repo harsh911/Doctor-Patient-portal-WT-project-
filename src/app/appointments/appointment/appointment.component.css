@@ -27,7 +27,6 @@ button:hover {
 .grid-container{
   grid-template-rows: auto auto auto auto auto;
   grid-gap: 10px;
-  margin-top: 120px;
   display: grid;
   border-radius: 5px;
   width: 70%;

@@ -66,9 +66,9 @@
   .box {
     align-content: center;
     position: relative;
-    top: 120px;
+    /* top: 120px; */
     display: block;
-    background-image: linear-gradient(to right,rgba(142, 192, 250, 0.6),rgba(0, 255, 179, 1));
+    background-image: linear-gradient(to right,rgb(202, 172, 246),rgb(164, 248, 214));
     font-weight:bold;
     width:400px;
     border-radius: 10px;

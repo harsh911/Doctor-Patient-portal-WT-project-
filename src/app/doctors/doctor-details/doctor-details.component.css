@@ -56,7 +56,7 @@ img{
   width: 800px;
   height: 450px;
   position: relative;
-  background-image: linear-gradient(19deg, #ff4c3f 0%, #ffffff 76%);
+  background-image: linear-gradient(rgb(255, 255, 189),rgb(184, 255, 184));
       text-decoration: none;
   color: black;
   font-weight: bold;

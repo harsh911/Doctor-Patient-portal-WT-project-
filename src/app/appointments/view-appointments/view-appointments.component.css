@@ -20,8 +20,8 @@ button:hover {
 
 .doctor-list:hover {
   transform: scale(1.05,1.05);
-  background-image: linear-gradient(to left,rgba(157, 203, 255, 0.6),rgb(255, 94, 0));
-
+  background-image: linear-gradient(to left,rgb(24, 2, 71),rgb(62, 1, 90));
+  color: rgb(255, 253, 255);
 }
 
 .grid-container{
@@ -69,9 +69,8 @@ button:hover {
 .box {
   align-content: center;
   position: relative;
-  top: 120px;
   display: block;
-  background-image: linear-gradient(to right,rgba(255, 120, 79, 0.6),rgb(255, 213, 179));
+  background-image: linear-gradient(to right,rgb(213, 255, 165),rgb(255, 213, 179));
   font-weight:bold;
   width:800px;
   border-radius: 10px;
