@@ -24,7 +24,9 @@
   padding: 10px 25px;
   transition: background-color 0.25s, color 0.25s,box-shadow 1s,transform 0.25s;
 }
-
+.active {
+    opacity:1;
+}
 .navbar li a:hover {
   /* position: static; */
   background-color: #21022f;
@@ -34,9 +36,9 @@
 }
 .active {
   /* position: static; */
-  background-color: #21022f;
-  color: navajowhite;
-  box-shadow: 0 4px 8px 0 rgba(200, 28, 216, 0.8), 0 6px 20px 0 rgb(18, 2, 19);
+  background-color :rgba(150, 255, 249, 1) !important;
+  color: black !important;
+  box-shadow: 0 4px 8px 0 rgba(200, 28, 216, 0.8), 0 6px 20px 0 rgb(18, 2, 19) !important;
 }
 
 .nav{

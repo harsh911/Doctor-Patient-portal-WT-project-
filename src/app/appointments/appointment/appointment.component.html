@@ -1,5 +1,4 @@
 <div class="container">
-    <app-doctor-list ></app-doctor-list>
 
     <div class="grid-container">
         <div class="item title">
@@ -7,8 +6,7 @@
         </div>
         <div class="item doctor">
             <label for="date">Doctor : </label>
-            <select ngFor>
-            </select>
+              <input [value]=doctor.name disabled=true/>
           </div>
         <div class="item date">
           <label for="date">Select Date: </label>
@@ -20,7 +18,7 @@
         </div>
 
         <div class="book">
-        <button routerLink="../all-appointments" type="button">Book Appointment</button>
+        <button  routerLink="../../all-appointments" type="button">Book Appointment</button>
       </div>
 
       </div>

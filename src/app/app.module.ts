@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AppointmentComponent } from './appointments/appointment/appointment.component';
+import { AppointmentsComponent } from './appointments/appointments.component';
 import { DetailsComponent } from './medical/details/details.component';
 import { DoctorListComponent } from './doctors/doctor-list/doctor-list.component';
 import { RegisterComponent } from './register/register/register.component';
@@ -17,25 +19,15 @@ import { DoctorsComponent } from './doctors/doctors.component';
 import { DoctorDetailsComponent } from './doctors/doctor-details/doctor-details.component';
 import { DoctorComponent } from './doctors/doctor-list/doctor/doctor.component';
 
-import { Routes, RouterModule } from '@angular/router';
 import { ViewAppointmentsComponent } from './appointments/view-appointments/view-appointments.component';
+import { AppRoutingModule } from './app-routing.module';
 
-const appRoutes: Routes = [
-  {path: '', component: ContentComponent },
-  {path: 'login', component: LoginComponent },
-  {path: 'register/doctor', component: RegDoctorComponent },
-  {path: 'register/patient', component: RegPatientComponent },
-  {path: 'doctors', component: DoctorsComponent },
-  {path: 'doctors/:id', component: DoctorsComponent },
-  {path: 'appointments', component: AppointmentComponent },
-  {path: 'medical', component: DetailsComponent },
-  {path: 'all-appointments', component: ViewAppointmentsComponent }
-];
 
 @NgModule({
   declarations: [
     AppComponent,
     AppointmentComponent,
+    AppointmentsComponent,
     DetailsComponent,
     DoctorListComponent,
     RegisterComponent,
@@ -53,7 +45,9 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

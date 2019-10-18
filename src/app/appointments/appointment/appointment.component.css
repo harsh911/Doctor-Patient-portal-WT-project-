@@ -10,6 +10,7 @@ button {
   font-weight: bold;
   background-color: green;
   align-content: center;
+  margin: 50px auto 50px auto;
 }
 button:hover {
   color: rgb(253, 255, 149);
@@ -19,18 +20,20 @@ button:hover {
 
 .container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
   padding: 10px;
   margin-left: 50px;
 }
-
+.item{
+  margin: 10px 30px;
+}
 .grid-container{
   grid-template-rows: auto auto auto auto auto;
   grid-gap: 10px;
   display: grid;
   border-radius: 5px;
-  width: 70%;
-  height: 60%;
+  max-width:400px;
+  /* padding: 10px 50px 30px 50px; */
   position: relative;
   background-image: linear-gradient(to right,rgba(142, 192, 250, 0.6),rgba(0, 255, 179, 1));
   text-decoration: none;
@@ -38,7 +41,10 @@ button:hover {
   font-weight: bold;
   box-shadow: 0 2px 4px 0 rgb(19, 14, 14), 0 6px 12px 0 rgb(124, 124, 124);
 }
-
+.viewall {
+  grid-row: 2/3;
+  width:100%;
+}
 .title{
   grid-row: 1/2;
   text-align: center;

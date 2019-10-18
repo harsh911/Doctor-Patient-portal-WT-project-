@@ -1,0 +1,36 @@
+.container {
+  display:grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 1fr;
+}
+.appoint {
+  grid-column: 1/2;
+  margin: auto;
+}
+.list {
+  grid-column: 2/3;
+  margin: auto;
+
+}
+
+.all {
+  grid-column: 3/4;
+  margin: auto;
+
+}
+button {
+  display: block;
+  font-size: 20px;
+  border-radius: 10px;
+  color: black;
+  font-weight: bold;
+  background-image: radial-gradient(rgb(2, 255, 189),rgb(100, 52, 224));
+  align-content: center;
+  padding: 50px;
+  cursor: pointer;
+}
+
+button:hover {
+  font-weight: bold;
+  background-image: radial-gradient(rgb(255, 155, 60),rgb(180, 252, 0));
+}

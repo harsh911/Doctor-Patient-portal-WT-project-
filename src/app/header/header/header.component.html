@@ -1,14 +1,14 @@
 
 <div class="nav">
-  <div id="ttl" ><a routerLink="/" (click)="onSelected('home')">Patient - Doctor Portal</a></div>
+  <div id="ttl" ><a  routerLink="/" (click)="onSelected('home')">Patient - Doctor Portal</a></div>
   <div class="navbar">
     <ul class="" style="margin-left:100px;">
-      <li><a  routerLink="/register/doctor" (click)="onSelected('history')"> Medical History</a></li>
-      <li><a routerLink="/doctors" (click)="onSelected('doctor')"> View Doctors</a></li>
-      <li><a routerLink="/appointments" (click)="onSelected('appointment')"> Book Appointment</a></li>
+      <li><a  routerLinkActive="active" routerLink="/register/doctor" (click)="onSelected('history')"> Medical History</a></li>
+      <li><a routerLinkActive="active" routerLink="/doctors" (click)="onSelected('doctor')"> View Doctors</a></li>
+      <li><a routerLinkActive="active" routerLink="/appointments" (click)="onSelected('appointment')">Appointments</a></li>
 
-      <li id="login" ><a routerLink="/login" (click)="onSelected('log')">  Log-in</a></li>
-      <li id="register" ><a routerLink="/register/patient" (click)="onSelected('register')">  Sign-in</a></li>
+      <li id="login" ><a routerLinkActive="active" routerLink="/login" (click)="onSelected('log')">  Log-in</a></li>
+      <li id="register" ><a routerLinkActive="active" routerLink="/register/patient" (click)="onSelected('register')">  Sign-in</a></li>
     </ul>
   </div>
 </div>

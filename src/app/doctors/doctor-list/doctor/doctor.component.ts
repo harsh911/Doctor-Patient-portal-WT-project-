@@ -7,15 +7,12 @@ import { Doctor } from '../../doctors.model';
   styleUrls: ['./doctor.component.css']
 })
 export class DoctorComponent implements OnInit {
-  @Output() doctorSelected  = new EventEmitter();
+  @Input() index: number;
   @Input() doctor: Doctor;
   constructor() { }
 
   ngOnInit() {
   }
 
-  onSelected() {
-    this.doctorSelected.emit();
-  }
 }
 

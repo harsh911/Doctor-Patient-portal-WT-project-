@@ -160,7 +160,7 @@
     position: relative;
     /* top: 120px; */
     display: block;
-    background-image: linear-gradient(to right,rgba(142, 192, 250, 0.6),rgba(0, 255, 179, 1));
+    background-image: radial-gradient(rgb(200, 255, 189),rgb(100, 152, 224));
     font-weight:bold;
 
     object-fit: cover;
