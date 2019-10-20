@@ -1,13 +1,13 @@
 <div class="grid-container">
-  <app-doctor-list></app-doctor-list>
+  <div class="doc-list">
+      <app-doctor-list></app-doctor-list>
+  </div>
 
   <div class="content">
-  <!-- <app-doctor-details
-  *ngIf = "doctor; else infotext"
-  [doctor]="doctor"></app-doctor-details> -->
+    <div class="details">
     <router-outlet></router-outlet>
   <ng-template #infotext>
-    <h1 style="margin-top: 300px;">Please select a doctor</h1>
+    <h1 >Please select a doctor</h1>
   </ng-template>
   </div>
 
@@ -18,5 +18,6 @@
         <option value="surgeon">Surgeon</option>
     </select>
     <button type="button">Filter</button>
+</div>
 </div>
 </div>

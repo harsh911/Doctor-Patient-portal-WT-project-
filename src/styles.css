@@ -3,6 +3,13 @@ body{
   padding:0px;
    /* background-image: url('https://images.wallpaperscraft.com/image/texture_spots_purple_130336_1600x900.jpg'); */
    /* background-image: url('https://assets.website-files.com/5bfd1275cc56e15ce750b18e/5c289afb9a15754195893a3d_16.%20Medium%20Purple.jpg'); */
-   background-size: cover;
+   /* background-image: url('https://assets.website-files.com/5bfd1275cc56e15ce750b18e/5c289afb9a1575baeb893ab3_76.%20Rice%20Flower.jpg'); */
+   /* background-image: url('https://media.istockphoto.com/photos/rays-of-light-in-the-corridor-of-the-hospital-picture-id629431156?k=6&m=629431156&s=612x612&w=0&h=hlFdUunRlBpgwrBZr_SBaUdsvAZswNAK54_NQhCv8iA='); */
+     /* background: radial-gradient(rgba(120, 218, 245, 0.5), rgba(29, 7, 156, 0.591)), url('https://media.istockphoto.com/photos/rays-of-light-in-the-corridor-of-the-hospital-picture-id629431156?k=6&m=629431156&s=612x612&w=0&h=hlFdUunRlBpgwrBZr_SBaUdsvAZswNAK54_NQhCv8iA='); */
+     background: radial-gradient(rgba(120, 218, 245, 0.5), rgba(2, 1, 10, 0.483)), url('https://media.istockphoto.com/photos/rays-of-light-in-the-corridor-of-the-hospital-picture-id629431156?k=6&m=629431156&s=612x612&w=0&h=hlFdUunRlBpgwrBZr_SBaUdsvAZswNAK54_NQhCv8iA=');
+     background-size: cover;
 }
 
+body#first{
+  opacity:0.1;
+}

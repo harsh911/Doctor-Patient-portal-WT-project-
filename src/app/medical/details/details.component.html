@@ -19,9 +19,10 @@
 
     <div class="illness">
         <label for="illness">Illnesses :</label>
-      <div *ngFor="let ill of illness">
-        {{ill}} <input type="checkbox" [id]="ill"  [name]="ill">
-
+      <select>
+        <option *ngFor="let ill of illness"value={{ill}}> {{ill}} </option>
+      </select>
+      <div >
       </div>
     </div>
     <div class="operations">
@@ -71,7 +72,7 @@
       </div>
 
     <div class="done">
-      <button type="button">Done</button>
+      <button routerLink="../" type="button">Done</button>
     </div>
 
   </div>
