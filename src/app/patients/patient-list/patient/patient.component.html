@@ -1,0 +1,15 @@
+<div>
+  <a class="list grid-container"
+  [routerLink]="[index]">
+  <span class="image grid-item">
+      <img
+      [src]="patient.imagePath"
+      alt="{{ patient.name }}" />
+    </span>
+  <div class="info grid-item">
+    <h2 >{{ patient.name }}</h2>
+    <div>{{ patient.age }}</div>
+  </div>
+</a>
+</div>
+

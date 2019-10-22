@@ -1,0 +1,22 @@
+<div class="list-container">
+  <div class="title">
+      <h1>Appointments</h1>
+  </div>
+
+  <div class="filter">
+    <label>Filter by Date:</label>
+    <select>
+        <option value="cardio">Monday 31/2/19</option>
+    </select>
+    <button type="button">Filter</button>
+  </div>
+
+  <div class="list">
+    <app-patient *ngFor="let p of patient;let i = index"
+    [patient]="p"
+    [index] = "i">
+
+    </app-patient>
+  </div>
+
+</div>

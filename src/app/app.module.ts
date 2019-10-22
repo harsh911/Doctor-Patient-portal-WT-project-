@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppComponent } from './app.component';
 import { AppointmentComponent } from './appointments/appointment/appointment.component';
@@ -21,6 +23,10 @@ import { DoctorComponent } from './doctors/doctor-list/doctor/doctor.component';
 
 import { ViewAppointmentsComponent } from './appointments/view-appointments/view-appointments.component';
 import { AppRoutingModule } from './app-routing.module';
+import { PatientsComponent } from './patients/patients.component';
+import { PatientListComponent } from './patients/patient-list/patient-list.component';
+import { PatientComponent } from './patients/patient-list/patient/patient.component';
+import { PatientDetailsComponent } from './patients/patient-details/patient-details.component';
 
 
 @NgModule({
@@ -41,13 +47,18 @@ import { AppRoutingModule } from './app-routing.module';
     DoctorsComponent,
     DoctorDetailsComponent,
     DoctorComponent,
-    ViewAppointmentsComponent
+    ViewAppointmentsComponent,
+    PatientsComponent,
+    PatientListComponent,
+    PatientComponent,
+    PatientDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

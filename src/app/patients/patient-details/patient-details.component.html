@@ -1,0 +1,43 @@
+<div>
+  <div class="grid-container">
+    <div class="info grid-item">
+      <div class="personal flip-card">
+        <div class="flip-card-inner">
+
+          <div class="flip-card-front">
+              <img [src]=patient.imagePath />
+              <h2>{{ patient.name }}</h2><br/>
+              <div class="item"><span class="key">Age: </span><span class="data">{{patient.age}}</span></div>
+              <div class="item"><span class="key">Address: </span><span class="data">{{patient.address}}</span></div>
+              <div class="item"><span class="key">Phone: </span><span class="data">{{patient.phone}}</span></div>
+              <div class="item"><span class="key">Height: </span><span class="data">{{patient.height}}</span></div>
+              <div class="item"><span class="key">Weight: </span><span class="data">{{patient.weight}}</span></div>
+
+          </div>
+          <!-- <div class="flip-card-back">
+              <h2>{{ patient.name }}</h2><br/>
+              <div class="item"><span class="key">Date: </span><span class="data">some date</span></div>
+              <div class="item"><span class="key">Date: </span><span class="data">some date</span></div>
+              <div class="item"><span class="key">Time: </span><span class="data">Some time</span></div>
+              <div class="item"><span class="key">Cancel: </span><span class="data">Cancel</span></div>
+              <div class="item"><span class="key">Re-schedule: </span><span class="data">Re-schedule</span></div>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="medical">
+          <h3>Medical Info</h3>
+          <div class="item"><span class="key">Allergies: </span><span class="data">{{patient.allergies}}</span></div>
+          <div class="item"><span class="key">Illnesses: </span><span class="data">{{patient.illness}}</span></div>
+          <div class="item"><span class="key">Operations: </span><span class="data">{{patient.operations}}</span></div>
+          <div class="item"><span class="key">Medications: </span><span class="data">{{patient.medication}}</span></div>
+          <div class="item"><span class="key">Exercise: </span><span class="data">{{patient.exercise}}</span></div>
+          <div class="item"><span class="key">Diet: </span><span class="data">{{patient.diet}}</span></div>
+          <div class="item"><span class="key">Alcohol: </span><span class="data">{{patient.allergies}}</span></div>
+          <div class="item"><span class="key">Smokes: </span><span class="data">{{patient.smoke}}</span></div>
+          <div class="item"><span class="key">Additional Comments: </span><span class="data">{{patient.comments}}</span></div>
+      </div>
+
+    </div>
+  </div>
+</div>

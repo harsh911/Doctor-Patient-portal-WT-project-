@@ -6,4 +6,6 @@
   font-size: 30px;
   text-align: center;
   color: navajowhite;
+  position: relative;
+  width:inherit;
 }

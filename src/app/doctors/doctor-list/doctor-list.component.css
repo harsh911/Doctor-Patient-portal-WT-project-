@@ -1,7 +1,7 @@
 .list-container{
   display: grid;
   grid-template-rows: auto auto auto;
-  background-color: rgb(190, 245, 248);
+  background-color: rgba(190, 245, 248, 0.537);
   width: 400px;
 }
 h1{

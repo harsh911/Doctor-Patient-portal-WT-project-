@@ -11,6 +11,8 @@ import { ViewAppointmentsComponent } from './appointments/view-appointments/view
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { AppointmentsComponent } from './appointments/appointments.component';
+import { PatientsComponent } from './patients/patients.component';
+import { PatientDetailsComponent } from './patients/patient-details/patient-details.component';
 
 
 const appRoutes: Routes = [
@@ -23,6 +25,9 @@ const appRoutes: Routes = [
   ]},
   {path: 'appointments', component: AppointmentsComponent , children: [
     {path: ':id', component: AppointmentComponent },
+  ]},
+  {path: 'view-appointments', component: PatientsComponent , children: [
+    {path: ':id', component: PatientDetailsComponent },
   ]},
   {path: 'medical', component: DetailsComponent },
   {path: 'all-appointments', component: ViewAppointmentsComponent }

@@ -39,9 +39,10 @@
 
 .nav{
     text-align: center;
-    position: relative;
+    position: fixed;
     width: 100%;
     top : 0;
+    z-index: 50;
 }
 .navbar{
     border-radius: 0px 0px 10px 10px;
@@ -65,15 +66,19 @@
     padding-top:10px;
 }
 #ttl{
-  width:100%;
   font-weight: bold;
     background-color : #08000c;
-    font-size: 40px;
+    /* font-size: 20px; */
     color: navajowhite;
-   box-shadow: 10px rgba(0, 0, 0, 0.2);
    text-decoration: none;
+   border-radius: 0px 0px 0px 10px;
+
 }
 #ttl a{
   text-decoration: none;
   color: navajowhite;
+}
+#ttl:hover{
+  transform: scale(1,1);
+  box-shadow: none;
 }
