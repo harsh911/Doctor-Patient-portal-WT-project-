@@ -17,19 +17,19 @@ export class RegPatientComponent implements OnInit {
   success: string;
 
   constructor( private patientService: PatientsService) { }
-  newPatient = new NewPatient('Harshad', 'Pednekar', 'male', '30-09-1998', 'mapusa', 'harshped41@gmail.com', 0, 'nothing', 'password', 'password');
+  newPatient = new NewPatient('Harshad', 'Pednekar', '30-09-1998', 'Male', 'mapusa', 'harshped41@gmail.com', 0, 'nothing', 'password', 'password');
 
   ngOnInit() {
-     this.addPatient(String);
   }
   addPatient(f) {
     this.error = '';
     this.success = '';
-    console.log("added");
+    console.log('added' + this.newPatient);
     this.patientService.store(this.newPatient).subscribe(
       (res: NewPatient) => {
         this.newPatient = res;
         this.success = 'Created Successfully';
+        f.reset();
       },
       (err) => this.error = err
     );
