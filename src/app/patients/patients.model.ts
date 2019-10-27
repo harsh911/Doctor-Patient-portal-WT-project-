@@ -42,3 +42,32 @@ export class Patient {
   }
 }
 
+export class NewPatient {
+  public fname: string;
+  public lname: string;
+  public dob: string;
+  public gender: string;
+  public address: string;
+  public phone: number;
+  public email: string;
+  public imagePath: string;
+  public pass1: string;
+  public pass2: string;
+
+
+  constructor(fname: string, lname: string, dob: string, gender: string, address: string, email: string, phone: number, imagePath: string, pass1: string, pass2: string ) {
+      this.fname = fname;
+      this.lname = lname;
+      this.dob = dob;
+      this.gender = gender;
+      this.address = address;
+      this.email = email;
+      this.phone = phone;
+      this.pass1 = pass1;
+      this.pass2 = pass2;
+      this.imagePath = imagePath;
+  }
+}
+
+
+

@@ -1,55 +1,226 @@
-<div class="box">
-    <div class="boxin">
-      <div class="title">
-       <h1>Patient Registration</h1>
-      </div>
 
-      <div class="firstname">
-          <label for="fname">First Name :</label>
-          <input type="text" id="fname">
-        </div>
-        <div class="lastname">
-          <label for="lname">Last Name :</label>
-          <input type="text" id="lname">
-      </div>
-       <div class="dob">
-          <label for="dob">Date of Birth :</label>
-          <input type="date" id="dob">
-        </div>
-        <div class="gender">
-          <label for="gender">Gender :</label>
-          <input type="radio" id="gender" style="width:20px" name="gender" checked>Male
-          <input type="radio" id="gender" style="width:20px" name="gender">Female
-      </div>
-      <div class="email">
-          <label for="email">Email :</label>
-          <input type="email" id="email">
-        </div>
-        <div class="phone">
-          <label for="phone">Phone :</label>
-          <input type="text" id="phone">
-      </div>
-      <div class="address">
-          <label for="addr">Address :</label>
-          <textarea type="text" id="addr"></textarea>
-      </div>
-      <br/>
-       <div class="photo">
-          <label for="image">Photo :</label>
-          <input type="file" id="image" accept="image/*">
-      </div>
 
-      <div class="pass1">
-          <label for="pass">Enter Password :</label>
-          <input type="password" id="pass1">
-        </div>
-        <div class="pass2">
-          <label for="pass">Re-Enter Password :</label>
-          <input type="password" id="pass1">
-      </div>
-      <div class="signin">
-        <button type="button">Sign-in</button>
-      </div>
+    <div class="box">
+      <form #f="ngForm" (ngSubmit)="addPatient(f)" class="boxin">
+          <div class="title">
+              <h1>Patient Registration</h1>
+             </div>
 
-    </div>
+             <div class="firstname form-group">
+                 <label for="fname">First Name :</label>
+                    <input type="text" name="fname"
+                    class="form-control"
+                    [(ngModel)]="newPatient.fname"
+                    #PatientFname="ngModel"
+                    required
+                    pattern="^[a-zA-Z]+$">
+                 </div>
+               <div class="lastname form-group">
+                 <label for="lname">Last Name :</label>
+                 <input type="text" name="lname"
+                      class="form-control"
+                      [(ngModel)]="newPatient.lname"
+                      #PatientLname="ngModel"
+                      required
+                      pattern="^[a-zA-Z]+$">
+             </div>
+              <div class="dob form-group">
+                 <label for="dob">Date of Birth :</label>
+                 <input type="date" name="dob"
+                    class="form-control"
+                    [(ngModel)]="newPatient.dob"
+                    #PatientDOB="ngModel"
+                    required>
+                 </div>
+               <div class="gender form-group">
+                 <label for="gender">Gender :</label>
+                 <input type="radio" id="gender" style="width:20px" name="gender" checked
+                 class="form-control"
+                 [(ngModel)]="newPatient.gender"
+                 #PatientGender="ngModel"
+                 required>
+                  Male
+
+                 <input type="radio" id="gender" style="width:20px" name="gender" class="form-control">
+                 Female
+             </div>
+             <div class="email form-group">
+                 <label for="email">Email :</label>
+                 <input type="email" name="email"
+                 class="form-control"
+                 [(ngModel)]="newPatient.email"
+                 #PatientEmail="ngModel"
+                 required>
+              </div>
+               <div class="phone form-group">
+                 <label for="phone">Phone :</label>
+                 <input type="tel" name="phone"
+                 class="form-control"
+                 [(ngModel)]="newPatient.phone"
+                 #PatientPhone="ngModel"
+                 required>
+              </div>
+
+             <div class="address form-group">
+                 <label for="address">Address :</label>
+                 <textarea type="text" name="address"
+                 class="form-control"
+                 [(ngModel)]="newPatient.address"
+                 #PatientAddress="ngModel"
+                 required>
+                 </textarea>
+              </div>
+
+             <br/>
+              <div class="photo form-group">
+                 <label for="image">Photo :</label>
+                 <input type="file" name="image" accept="image/*"
+                 class="form-control"
+                 [(ngModel)]="newPatient.imagePath"
+                 #PatientImage="ngModel"
+                 required>
+              </div>
+
+
+             <div class="pass1 form-group">
+                 <label for="pass">Enter Password :</label>
+                 <input type="password" name="pass1"
+                 class="form-control"
+                 [(ngModel)]="newPatient.pass1"
+                 #PatientPass1="ngModel"
+                 required>
+              </div>
+
+               <div class="pass2 form-group">
+                 <label for="pass">Re-Enter Password :</label>
+                 <input type="password" name="pass2"
+                 class="form-control"
+                 [(ngModel)]="newPatient.pass2"
+                 #PatientPass2="ngModel"
+                 required>
+              </div>
+
+             <div class="signin">
+               <button type="submit" [disabled]="!f.valid">Sign-in</button>
+             </div>
+
+      </form>
+
   </div>
+
+<!-- 
+  
+
+    <div class="box" id="patientForm">
+      <form #f="ngForm" name="patientForm" (submit)=addPatient(f) class="boxin">
+          <div class="title">
+              <h1>Patient Registration</h1>
+             </div>
+
+             <div class="firstname form-group">
+                 <label for="fname">First Name :</label>
+                    <input type="text" name="fname"
+                    class="form-control"
+                    [(ngModel)]="newPatient.fname"
+                    #PatientFname="ngModel"
+                    required
+                    pattern="^[a-zA-Z]+$">
+                 </div>
+               <div class="lastname form-group">
+                 <label for="lname">Last Name :</label>
+                 <input type="text" name="lname"
+                      class="form-control"
+                      [(ngModel)]="newPatient.lname"
+                      #PatientLname="ngModel"
+                      required
+                      pattern="^[a-zA-Z]+$">
+             </div>
+              <div class="dob form-group">
+                 <label for="dob">Date of Birth :</label>
+                 <input type="date" name="dob"
+                    class="form-control"
+                    [(ngModel)]="newPatient.dob"
+                    #PatientDOB="ngModel"
+                    required>
+                 </div>
+               <div class="gender form-group">
+                 <label for="gender">Gender :</label>
+                 <input type="radio" id="gender" style="width:20px" name="gender" checked
+                 class="form-control"
+                 [(ngModel)]="newPatient.gender"
+                 #PatientGender="ngModel"
+                 required>
+                  Male
+
+                 <input type="radio" id="gender" style="width:20px" name="gender" class="form-control"
+                 [(ngModel)]="newPatient.gender"
+                 #PatientGender="ngModel"
+                 required>
+                 Female
+             </div>
+             <div class="email form-group">
+                 <label for="email">Email :</label>
+                 <input type="email" name="email"
+                 class="form-control"
+                 [(ngModel)]="newPatient.email"
+                 #PatientEmail="ngModel"
+                 required>
+              </div>
+               <div class="phone form-group">
+                 <label for="phone">Phone :</label>
+                 <input type="tel" name="phone"
+                 class="form-control"
+                 [(ngModel)]="newPatient.phone"
+                 #PatientPhone="ngModel"
+                 required>
+              </div>
+
+             <div class="address form-group">
+                 <label for="address">Address :</label>
+                 <textarea type="text" name="address"
+                 class="form-control"
+                 [(ngModel)]="newPatient.address"
+                 #PatientAddress="ngModel"
+                 required>
+                 </textarea>
+              </div>
+
+             <br/>
+              <div class="photo form-group">
+                 <label for="image">Photo :</label>
+                 <input type="file" name="image" accept="image/*"
+                 class="form-control"
+                 [(ngModel)]="newPatient.imagePath"
+                 #PatientImage="ngModel"
+                 required>
+              </div>
+
+
+             <div class="pass1 form-group">
+                 <label for="pass">Enter Password :</label>
+                 <input type="password" name="pass1"
+                 class="form-control"
+                 [(ngModel)]="newPatient.pass1"
+                 #PatientPass1="ngModel"
+                 required>
+              </div>
+
+               <div class="pass2 form-group">
+                 <label for="pass">Re-Enter Password :</label>
+                 <input type="password" name="pass2"
+                 class="form-control"
+                 [(ngModel)]="newPatient.pass2"
+                 #PatientPass2="ngModel"
+                 required>
+              </div>
+
+             <div class="signin">
+               <button type="button" (click)=addPatient(f) [disabled]="!f.valid">Sign-in</button>
+             </div>
+
+      </form>
+
+  </div>
+
+
+ -->

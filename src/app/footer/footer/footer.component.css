@@ -1,6 +1,7 @@
 .foot-container {
   padding: 50px;
   background-image: linear-gradient(to right,rgb(2, 2, 86),rgb(116, 3, 116));
+  /* background-image: linear-gradient(to right,rgba(142, 192, 250, 0.6),rgba(0, 255, 179, 1)); */
   border: 2px solid blue;
   bottom:0px;
   font-size: 30px;

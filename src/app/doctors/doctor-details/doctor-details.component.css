@@ -16,7 +16,9 @@
   position: relative;
   margin-left:150px;
 }
-
+.item, .item span{
+  border-bottom: 1px blue dashed;
+}
 .info span{
   color: rgb(42, 0, 83);
   font-size: 20px;
