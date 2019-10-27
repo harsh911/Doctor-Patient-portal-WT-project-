@@ -1,7 +1,5 @@
-
-
     <div class="box">
-      <form #f="ngForm" (ngSubmit)="addPatient(f)" class="boxin">
+      <form #f="ngForm" name="patientForm" (ngSubmit)="addPatient(f)" class="boxin" enctype="multipart/form-data">
           <div class="title">
               <h1>Patient Registration</h1>
              </div>
@@ -33,16 +31,20 @@
                     required>
                  </div>
                <div class="gender form-group">
+                <div class="form-control"
+                name="gender"
+                class="form-control"
+                [(ngModel)]="newPatient.gender"
+                #PatientGender="ngModel"
+                required>
+
                  <label for="gender">Gender :</label>
-                 <input type="radio" id="gender" style="width:20px" name="gender" checked
-                 class="form-control"
-                 [(ngModel)]="newPatient.gender"
-                 #PatientGender="ngModel"
-                 required>
+                 <input type="radio" style="width:20px" name="gender" value="Male" checked>
                   Male
 
-                 <input type="radio" id="gender" style="width:20px" name="gender" class="form-control">
+                 <input type="radio" style="width:20px" name="gender" value="Female">
                  Female
+                </div>
              </div>
              <div class="email form-group">
                  <label for="email">Email :</label>
@@ -101,15 +103,15 @@
               </div>
 
              <div class="signin">
-               <button type="submit" [disabled]="!f.valid">Sign-in</button>
+               <button type="submit">Sign-in</button>
              </div>
 
       </form>
 
   </div>
 
-<!-- 
-  
+<!--
+
 
     <div class="box" id="patientForm">
       <form #f="ngForm" name="patientForm" (submit)=addPatient(f) class="boxin">
