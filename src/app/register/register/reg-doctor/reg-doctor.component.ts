@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
 
 
 @Component({
@@ -12,20 +12,21 @@ export class RegDoctorComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.initForm();
   }
   private initForm() {
-        let fname = '';
-        let lname = '';
-        let dob = '';
-        let email = '';
-        let phone = '';
-        let pass1= '';
-        let pass2 = '';
-        let gender = '';
-        let address = '';
-        let image = '';
-        let office = '';
-        let specialization = '';
+        const fname = '';
+        const lname = '';
+        const dob = '';
+        const email = 'harsh@gmail.com';
+        const phone = '';
+        const pass1 = '';
+        const pass2 = '';
+        const gender = '';
+        const address = '';
+        const image = '';
+        const offices = new FormArray([]);
+        const specializations = new FormArray([]);
         this.DoctorForm = new FormGroup({
           fname: new FormControl(fname, Validators.required),
           lname: new FormControl(lname, Validators.required),
@@ -37,14 +38,42 @@ export class RegDoctorComponent implements OnInit {
           pass1: new FormControl(pass1, Validators.required),
           pass2: new FormControl(pass2, Validators.required),
           image: new FormControl(image, Validators.required),
-          specialization: new FormControl(specialization, Validators.required),
-          office: new FormControl(office, Validators.required)
+          'specializations': specializations,
+          'offices': offices
         });
+        this.onAddSpecial();
+        this.onAddOffice();
         console.log(this.DoctorForm);
 
       }
+      getSPControls() {
+        return (this.DoctorForm.get('specializations') as FormArray).controls;
+      }
+      onAddSpecial() {
+        ( this.DoctorForm.get('specializations') as FormArray).push(
+          new FormGroup({
+            type: new FormControl(null, Validators.required)
+          })
+        );
+      }
+
+      getOfficeControls() {
+        return (this.DoctorForm.get('offices') as FormArray).controls;
+      }
+      onAddOffice() {
+        ( this.DoctorForm.get('offices') as FormArray).push(
+          new FormGroup({
+            place: new FormControl(null, Validators.required)
+          })
+        );
+      }
+
+      // onDelete(index: number) {
+      //   ( this.DoctorForm.get('specialization') as FormArray).removeAt(index);
+      // }
 
   onSubmit() {
+    console.log(this.DoctorForm);
 
   }
 }

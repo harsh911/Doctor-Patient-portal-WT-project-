@@ -1,11 +1,12 @@
 <div>
     <div class="grid-container">
       <div class="info grid-item">
-        <h2 >{{ doctor.name }}</h2>
-        <div class="item"><span>Specialization: </span>{{ doctor.specialisation }}</div>
+        <h2 >{{ doctor.fname }}&nbsp;{{ doctor.lname }}</h2>
+        <div class="item"><span>Specialization: </span>{{ doctor.specialization }}</div>
         <div class="item"><span>Office: </span>{{ doctor.office }}</div>
         <div class="item"><span>Phone: </span>{{ doctor.phone }}</div>
         <div class="item"><span>Age: </span>{{ doctor.age }}</div>
+        <div class="item"><span>email: </span>{{ doctor.email }}</div>
         <div class="item"><span>Address: </span>{{ doctor.address }}</div>
         <hr>
         <div  class="">
@@ -16,7 +17,7 @@
         <div class="image grid-item">
           <img
           [src]="doctor.imagePath"
-          alt="{{ doctor.name }}" />
+          alt="{{ doctor.fname }}" />
       </div>
 
       </div>

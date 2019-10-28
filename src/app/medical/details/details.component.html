@@ -1,79 +1,117 @@
 <div class="box">
-  <div class="boxin">
+  <form (ngSubmit)="onSubmit()" class="boxin" [formGroup]="medForm">
     <div class="title">
      <h1>Medical History</h1>
     </div>
 
-    <div class="height">
+    <div class="height form-group">
         <label for="height">Height(cm's) :</label>
-        <input type="number" id="height">
-    </div>
-      <div class="weight">
+        <input type="number" id="height"
+        formControlName="height" class="form-control">
+      </div>
+      <div class="weight form-group">
         <label for="weight">Weight(Kg's) :</label>
-        <input type="number" id="weight">
-    </div>
-    <div class="drugAllergies">
-      <label for="drugAllergies">Enter drug allergies (if any) :</label>
-      <input type="text" id="drugAllergies">
-  </div>
-
-    <div class="illness">
-        <label for="illness">Illnesses :</label>
-      <select>
-        <option *ngFor="let ill of illness"value={{ill}}> {{ill}} </option>
-      </select>
-      <div >
+        <input type="number" id="weight"
+        formControlName="weight" class="form-control">
+      </div>
+  <div class="drugAllergies">
+      <label for="drugAllergies">Any Drug allergies :</label>
+     <div formArrayName="drugAllergies">
+        <div *ngFor="let Ctrl of getAllergyControl();let i=index"
+        [formGroupName]="i"
+          style="margin-top: 10px;">
+          <input type="text"
+          formControlName="allergyName" class="form-control">
+        </div>
+            <button  type="button"
+              (click)="onAddAllergy()">Add More</button>
       </div>
     </div>
-    <div class="operations">
-      <label for="operations">Any Operations :</label>
-      <input type="text" id="operations">
-  </div>
-  <div class="medications">
-    <label for="medications">Any Currunt medications :</label>
-    <input type="text" id="medications">
-  </div>
-  <div class="exercise">
+
+    <div class="illness">
+        <label for="illness">Any illnessess :</label>
+       <div formArrayName="illness">
+          <div *ngFor="let Ctrl of getIllnessControl();let i=index"
+          [formGroupName]="i"
+            style="margin-top: 10px;">
+            <select
+            formControlName="illnessName" class="form-control">
+            <option *ngFor="let ill of illnesses"value={{ill}}> {{ill}} </option>
+          </select>
+          </div>
+              <button  type="button"
+                (click)="onAddIllness()">Add More</button>
+        </div>
+      </div>
+
+      <div class="operations">
+          <label for="operations">Any Operations :</label>
+         <div formArrayName="operations">
+            <div *ngFor="let Ctrl of getOperationControl();let i=index"
+            [formGroupName]="i"
+              style="margin-top: 10px;">
+              <input type="text"
+              formControlName="opearionName" class="form-control">
+            </div>
+                <button  type="button"
+                  (click)="onAddOperation()">Add More</button>
+          </div>
+        </div>
+
+        <div class="medications">
+            <label for="medications">Any Current Medications :</label>
+           <div formArrayName="medications">
+              <div *ngFor="let Ctrl of getMedicationControl();let i=index"
+              [formGroupName]="i"
+                style="margin-top: 10px;">
+                <input type="text"
+                formControlName="medicationName" class="form-control">
+              </div>
+                  <button  type="button"
+                    (click)="onAddMedication()">Add More</button>
+            </div>
+          </div>
+  <div class="exercise form-group">
     <label for="exercise">Exercise :</label>
-     <select>
+     <select  formControlName="exercise" class="form-control">
         <option value="never">Never</option>
         <option value="1-2">1-2 days</option>
         <option value="3-4">3-4 days</option>
         <option value="5+">5+ days</option>
      </select>
   </div>
-  <div class="diet">
+  <div class="diet form-group">
       <label for="diet">Diet Plan :</label>
-       <select>
+       <select formControlName="diet" class="form-control">
           <option value="loose">Loose Diet</option>
           <option value="strict">Strict Diet</option>
           <option value="none">No Diet Plan</option>
        </select>
     </div>
 
-    <div class="alcohol">
+    <div class="alcohol form-group">
         <label for="alcohol">Alcohol consumption :</label>
-         <select>
+         <select formControlName="alcohol" class="form-control">
             <option value="never">Never</option>
             <option value="1-2">1-2 times/week</option>
             <option value="5+">3+ times/week</option>
          </select>
       </div>
 
-      <div class="smoke">
+      <div class="smoke form-group">
           <label for="gender">Do you Smoke? :</label>
           <input type="radio" id="smoke" style="width:20px" name="smoke" checked>No
           <input type="radio" id="smoke" style="width:20px" name="smoke">Yes
       </div>
 
-      <div class="comments">
+      <div class="comments form-group">
           <label for="comments">Any other comments regarding health :</label>
-          <textarea class="comments"></textarea>
+          <textarea class="comments" formControlName="comments" class="form-control"></textarea>
       </div>
 
     <div class="done">
       <button routerLink="../" type="button">Done</button>
     </div>
 
-  </div>
+  </form>
 </div>

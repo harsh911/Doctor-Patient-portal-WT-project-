@@ -9,10 +9,26 @@ import { DoctorService } from '../doctors.service';
 })
 export class DoctorListComponent implements OnInit {
    doctor: Doctor[];
-
+    error = '';
+    success = '';
   constructor( private doctorservice: DoctorService) { }
 
   ngOnInit() {
-    this.doctor = this.doctorservice.getDoctors();
+    // this.doctor = this.doctorservice.getDoctors();
+    this.getDoctors();
+    console.log('doctors');
+    console.log(this.doctor);
+  }
+
+  getDoctors(): void {
+    this.doctorservice.getAllDoctors().subscribe(
+      (res: Doctor[]) => {
+        this.doctor = res;
+        console.log(this.doctor);
+      },
+      (err) => {
+        this.error = err;
+      }
+    );
   }
 }

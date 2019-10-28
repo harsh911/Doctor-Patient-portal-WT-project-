@@ -7,7 +7,7 @@
 
     <div class="firstname form-group">
         <label for="fname">First Name :</label>
-        <input type="text" id="fname" 
+        <input type="text" id="fname"
         formControlName="fname" class="form-control">
       </div>
       <div class="lastname form-group">
@@ -20,10 +20,28 @@
         <input type="date" id="dob"
         formControlName="dob" class="form-control">
       </div>
-      <div class="specialization form-group">
-          <label for="specialization">Specialization :</label>
-          <input type="text" id="specialization"
-          formControlName="specialization" class="form-control">
+      <div class="specialization">
+        <label for="specialization">Specializations :</label>
+        <div formArrayName="specializations">
+          <div *ngFor="let spCtrl of getSPControls();let i=index"
+          [formGroupName]="i"
+            style="margin-top: 10px;">
+            <span>
+                <input type="text"
+                formControlName="type" class="form-control">
+                <!-- <button
+                type="button"
+                class="btn btn-danger"
+                (click)="onDelete(i)">X</button> -->
+            </span>
+          </div>
+          <div class="col-xs-12">
+              <button
+                type="button"
+                class="btn btn-success"
+                (click)="onAddSpecial()">Add More</button>
+            </div>
+        </div>
       </div>
       <div class="email form-group">
         <label for="email">Email :</label>
@@ -50,13 +68,19 @@
         <textarea type="text" id="address"
         formControlName="address" class="form-control"></textarea>
     </div>
-    <div class="office form-group">
-        <label for="office">Office :</label>
-        <textarea type="text" id="office"
-        formControlName="office" class="form-control"></textarea>
-    </div>
-    <br/>
-
+    <div class="office">
+        <label for="office">Offices :</label>
+        <div formArrayName="offices">
+          <div *ngFor="let officeCtrl of getOfficeControls();let i=index"
+          [formGroupName]="i"
+            style="margin-top: 10px;">
+            <textarea type="text" 
+            formControlName="place" class="form-control"></textarea>
+          </div>
+              <button  type="button"
+                (click)="onAddOffice()">Add More</button>
+        </div>
+      </div>
 
     <div class="pass1 form-group">
         <label for="pass">Enter Password :</label>
@@ -69,8 +93,10 @@
         formControlName="pass2" class="form-control">
     </div>
     <div class="signin">
-      <button type="button">Sign-in</button>
+      <button type="button" (click)=onSubmit()>Sign-in</button>
     </div>
 
   </form>
 </div>
+
+

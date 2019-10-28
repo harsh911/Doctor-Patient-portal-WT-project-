@@ -3,7 +3,7 @@
 .info{
   font-size: 36px;
   padding:0px 20px 20px 20px;
-  height:400px;
+  height:450px;
   width: 400px;
   margin:20px;
   position: relative;
@@ -56,7 +56,7 @@ img{
   grid-template-columns: auto auto auto;
   border-radius: 10px;
   width: 800px;
-  height: 450px;
+  height: 500px;
   position: relative;
   background-image: linear-gradient(rgb(255, 255, 189),rgb(184, 255, 184));
       text-decoration: none;
